@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Home | Covid-19</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href="static/img/icon1.jpg" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@500;700&display=swap" rel="stylesheet"> 
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="static/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="static/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+    <link href="static/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="static/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="static/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    
+    <!-- Navbar Start -->
+    <div class="container-fluid sticky-top bg-dark bg-light-radial shadow-sm px-5 pe-lg-0">
+        <nav class="navbar navbar-expand-lg bg-dark bg-light-radial navbar-dark py-3 py-lg-0">
+            <a href="/" class="navbar-brand">
+                <h1 class="m-0 display-4 text-uppercase text-white"><i class='fas fa-virus' style='font-size:60px;color:red'></i>COVID-19</h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto py-0">
+                    <a href="/" class="nav-item nav-link ">Home</a>
+                    <a href="/about" class="nav-item nav-link">About</a>
+                    <a href="/view" class="nav-item nav-link ">View Data</a>
+                    
+                    <a href="/model" class="nav-item nav-link active">Model Training</a>
+                    <a href="/prediction" class="nav-item nav-link bg-primary text-white px-5 ms-3 d-none d-lg-block">Prediction <i class="bi bi-arrow-right"></i></a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+
+
+    <!-- Carousel Start -->
+    <div class="container-fluid p-0">
+        <div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <!-- <img class="w-100" src="static/img/3.gif" alt="Image"> -->
+                    <center>
+                        <h3 style="bottom: 222px;color:rgb(245, 53, 6); margin-top: 50px;">{{msg}}</h3>
+                        </center>
+                    <center>
+                        <h3 style="bottom: 222px;color:rgb(19, 18, 18); margin-top: 200px;">Prediction of Covid-19 Through Cough Analysis</h3>
+                     </center>
+                     <h3 style="color:rgb(15, 15, 15);">  </h3>
+        
+        
+                     <center><h3 style="color:rgb(10, 9, 9);bottom: 100px;">With the help of Machine Learning </h3></center>
+                     <p>
+        
+        
+        
+                        <form action="{{url_for('prediction')}}" method="post">
+                            <center>
+                            <input type="text" name="f1" placeholder="Enter spectral_centroid" style="background-color:white;width: 407.99306px;height: 45.99306px;">
+                            <input type="text" name="f2" placeholder="Enter spectral_bandwidth" style="background-color:white;width: 407.99306px;height: 45.99306px;"><br>
+                            <input type="text" name="f3" placeholder="Enter rolloff" style="background-color:white;width: 407.99306px;height: 45.99306px;">
+                            <input type="text" name="f4" placeholder="Enter mfcc1" style="background-color:white;width: 407.99306px;height: 45.99306px;"><br>
+                            <input type="text" name="f5" placeholder="Enter mfcc2" style="background-color:white;width: 407.99306px;height: 45.99306px;">
+                            <input type="text" name="f6" placeholder="Enter mfcc3" style="background-color:white;width: 407.99306px;height: 45.99306px;"><br>
+                            <input type="text" name="f7" placeholder="Enter mfcc5" style="background-color:white;width: 407.99306px;height: 45.99306px;">
+                            <input type="text" name="f8" placeholder="Enter mfcc6" style="background-color:white;width: 407.99306px;height: 45.99306px;"><br>
+                            <input type="text" name="f9" placeholder="Enter mfcc8" style="background-color:white;width: 407.99306px;height: 45.99306px;">
+                            <input type="text" name="f10" placeholder="Enter mfcc12" style="background-color:white;width: 407.99306px;height: 45.99306px;"><br>
+                            <input type="text" name="f11" placeholder="Enter mfcc14" style="background-color:white;width: 407.99306px;height: 45.99306px;">
+                            <input type="text" name="f12" placeholder="Enter mfcc21" style="background-color:white;width: 407.99306px;height: 45.99306px;"><br>
+                            <input type="text" name="f13" placeholder="Enter mfcc30" style="background-color:white;width: 407.99306px;height: 45.99306px;">
+                            <input type="text" name="f14" placeholder="Enter mfcc32" style="background-color:white;width: 407.99306px;height: 45.99306px;"><br>
+                            <input type="text" name="f15" placeholder="Enter mfcc34" style="background-color:white;width: 407.99306px;height: 45.99306px;">
+                            <input type="text" name="f16" placeholder="Enter mfcc36" style="background-color:white;width: 407.99306px;height: 45.99306px;">
+                            
+
+                            </center>
+        
+                                <input class="btn btn-primary" type="submit" value="Submit"style="margin-left: 700px;margin-top: 33px;margin-bottom: 200px;"> 
+                        </form>
+                       </div>
+                
+            </div>
+            
+        </div>
+    </div>
+    <!-- Carousel End -->
+
+
+  
+
+
+    <!-- Back to Top -->
+    <!-- <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a> -->
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="static/lib/easing/easing.min.js"></script>
+    <script src="static/lib/waypoints/waypoints.min.js"></script>
+    <script src="static/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="static/lib/tempusdominus/js/moment.min.js"></script>
+    <script src="static/lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="static/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+    <script src="static/lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="static/lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="static/js/main.js"></script>
+</body>
+
+</html>
